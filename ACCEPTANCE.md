@@ -191,7 +191,7 @@
 - [x] **網域與倉庫遷移（2026-09-29）**：
   - 執行 `node tools/build-pages.mjs` 成功；以 Chromium 開啟本機 `http://localhost:8879/`，確認 OG／Twitter 分享圖、三語 sitemap 與 robots 指向 `https://bushwhack.ysgs.app/`，頁尾原始碼連結為 `https://github.com/YuStellarGamesStudio/Bushwhack`，無頁面錯誤。
   - 英文分享圖由 SVG 重新輸出為 630 × 500 PNG，目視確認右下角顯示新網域。
-  - 推送前外網查詢（2026-09-29 07:43 UTC）：新網域回傳 HTTP 404；Pages API 仍回報舊自訂網域。新網域部署尚未驗證通過；上方 2026-09-24 部署紀錄保留當時網址，不代表新網域狀態。
+  - 推送後外網查詢（2026-09-29 07:45 UTC）：提交 `acc3afc` 的 Pages API 回報 `status: built`，自訂網域已更新為 `bushwhack.ysgs.app`，新網址 `https://bushwhack.ysgs.app/` 經 Cloudflare 回傳 HTTP 200；Pages 的 `https_enforced` 仍為 `false`，Cloudflare SSL 模式與分享平台抓取預覽未驗證。上方 2026-09-24 部署紀錄保留當時網址，不代表新網域狀態。
 
 ### 重玩系統（皆為場景設定，以 `update()` 推進時間）
 
