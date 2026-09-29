@@ -5,7 +5,7 @@
 ## 專案概要
 
 - 純前端俯視射擊遊戲：HTML5 Canvas + 原生 JavaScript，無框架、無打包工具、無後端、無 npm 相依。
-- 部署：GitHub Pages（`main` 分支根目錄）→ Cloudflare CDN，網址 `https://bushwhack.yustellar.dev`（`CNAME`）。儲存庫 `https://github.com/YueyuHoshizora/bushwhack`。
+- 部署：GitHub Pages（`main` 分支根目錄）→ Cloudflare CDN，網址 `https://bushwhack.ysgs.app`（`CNAME`）。儲存庫 `https://github.com/YuStellarGamesStudio/Bushwhack`。
 - 授權 AGPL-3.0-only（`LICENSE`）。
 - 只支援桌面鍵盤 + 滑鼠，不做行動裝置設計。
 - 回覆使用者時使用繁體中文。
@@ -69,10 +69,10 @@
 - 來源：企劃書〈網頁射擊小遊戲企劃-v1.0〉的 Gate A–D 與驗收題 Q1–Q14，以及後續使用者需求（隨機地圖、OG／分享圖、授權、音效、兵種、商店、介面不捲動、音量、地形群聚、資源雜湊、多語系、sitemap、難度調整等）。
 - 內容必須反映**目前版本**的實測結果：每項寫明驗證方式（真實輸入或記憶體內場景設定）、觀察到的數值（例如第 10 波近戰 HP 應為 `round(48 × (1 + 0.14 × 9)) = 108`）與結論。數值變更後舊的觀察值即失效，要重新實測並改寫，不可沿用。
 - 只記錄實際執行過的驗證；未驗證或無法驗證的項目（例如分享平台抓取預覽、Cloudflare 設定、實機 60fps、長時間實玩手感）明確標註「未驗證」與原因，不得宣稱通過。
-- 新增功能或需求時，在「額外需求」加入對應驗收項；外網部署狀態（GitHub Pages、`https://bushwhack.yustellar.dev`）要寫明查詢時間點與結果。
+- 新增功能或需求時，在「額外需求」加入對應驗收項；外網部署狀態（GitHub Pages、`https://bushwhack.ysgs.app`）要寫明查詢時間點與結果。
 - 提交前確認 `ACCEPTANCE.md`、`DESIGN.md` 與 `CONFIG` 的數值一致。
 
 ## 部署注意
 
-- 推送 `main` 後 GitHub Pages 直接發布靜態檔（`.nojekyll` 停用 Jekyll）；推送後以 `gh api repos/YueyuHoshizora/bushwhack/pages/builds/latest` 確認 `status: built`。Cloudflare 若仍快取舊的 `index.html`，清除 `/` 的快取。
+- 推送 `main` 後 GitHub Pages 直接發布靜態檔（`.nojekyll` 停用 Jekyll）；推送後以 `gh api repos/YuStellarGamesStudio/Bushwhack/pages/builds/latest` 確認 `status: built`。Cloudflare 若仍快取舊的 `index.html`，清除 `/` 的快取。
 - 社群分享預覽爬蟲不執行 JavaScript，任何語系網址的 OG／Twitter 文字皆為預設語系（英文）；`og:image` 為絕對網址。

@@ -14,7 +14,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import vm from 'node:vm';
 
-const ORIGIN = 'https://bushwhack.yustellar.dev/';
+const ORIGIN = 'https://bushwhack.ysgs.app/';
 const DEFAULT_LOCALE = 'en';
 const root = fileURLToPath(new URL('..', import.meta.url));
 const read = file => readFileSync(`${root}${file}`, 'utf8');

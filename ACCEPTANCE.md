@@ -174,20 +174,24 @@
   - 開局後依序點 ja、中文、English：頁面未重新載入（測試標記保留），軍械庫標題即時變為「武器庫」「軍械庫」「Armory」（軍械庫此時未開啟）。
   - 網址依序變為 `?lang=ja`、`?lang=zh-Hant` 與無參數；canonical 的 `href` 屬性同步為 `?lang=ja`、`?lang=zh-Hant`、`./`（相對路徑）。
 - [x] **相對路徑**：
-  - `index.html` 中所有 `href`／`src`／meta `content` 除頁尾 GitHub 原始碼連結與分享圖外，沒有 `http(s)://` 或 `/` 開頭的值；`og:image`、`og:image:secure_url`、`twitter:image` 為 `https://bushwhack.yustellar.dev/assets/og-cover.png`。
+  - `index.html` 中所有 `href`／`src`／meta `content` 除頁尾 GitHub 原始碼連結與分享圖外，沒有 `http(s)://` 或 `/` 開頭的值；`og:image`、`og:image:secure_url`、`twitter:image` 為 `https://bushwhack.ysgs.app/assets/og-cover.png`。
   - 以另一個伺服器把儲存庫掛在子路徑 `http://localhost:8766/game/`：沒有 4xx 回應、沒有 `pageerror`，圖示解析為 `/game/favicon.ico?v=…` 等，分享網址基底 `SITE_URL` 為 `http://localhost:8766/game/`；點中文後網址為 `/game/?lang=zh-Hant`。
 - [x] **音樂／音效設定**：
   - 清除 `localStorage` 後兩個音量皆預設 100%，音樂為開啟。
   - 按 `M` 關閉音樂、音效調到 40% 後重新載入，設定仍保留。
   - 音效實際聽感未以耳測驗證，僅確認設定與 UI 狀態。
 - [x] **Sitemap 與資源雜湊**：
-  - `sitemap.xml` 列出 3 個語系網址（絕對網址）：`https://bushwhack.yustellar.dev/`（en）、`?lang=zh-Hant`、`?lang=ja`，`x-default` 為 `/`。
+  - `sitemap.xml` 列出 3 個語系網址（絕對網址）：`https://bushwhack.ysgs.app/`（en）、`?lang=zh-Hant`、`?lang=ja`，`x-default` 為 `/`。
   - `index.html` 以 `?v=<內容雜湊>` 引用 `style.css`、`i18n.js`、`game.js`、`favicon.ico`、`assets/favicon.svg` 與 `assets/apple-touch-icon.png`。
   - 重新執行 `node tools/build-pages.mjs` 後產生檔沒有差異。
 - [x] **OG / Twitter**：
-  - `og:url` 為 `./`，`og:image`／`twitter:image` 為 `https://bushwhack.yustellar.dev/assets/og-cover.png`（絕對網址），`twitter:card` 為 `summary_large_image`。
+  - `og:url` 為 `./`，`og:image`／`twitter:image` 為 `https://bushwhack.ysgs.app/assets/og-cover.png`（絕對網址），`twitter:card` 為 `summary_large_image`。
   - 分享圖為 1200 × 630 PNG。
 - [x] **授權**：`LICENSE` 為 GNU AGPL 第三版全文，頁尾附授權與原始碼連結。
+- [x] **網域與倉庫遷移（2026-09-29）**：
+  - 執行 `node tools/build-pages.mjs` 成功；以 Chromium 開啟本機 `http://localhost:8879/`，確認 OG／Twitter 分享圖、三語 sitemap 與 robots 指向 `https://bushwhack.ysgs.app/`，頁尾原始碼連結為 `https://github.com/YuStellarGamesStudio/Bushwhack`，無頁面錯誤。
+  - 英文分享圖由 SVG 重新輸出為 630 × 500 PNG，目視確認右下角顯示新網域。
+  - 推送前外網查詢（2026-09-29 07:43 UTC）：新網域回傳 HTTP 404；Pages API 仍回報舊自訂網域。新網域部署尚未驗證通過；上方 2026-09-24 部署紀錄保留當時網址，不代表新網域狀態。
 
 ### 重玩系統（皆為場景設定，以 `update()` 推進時間）
 

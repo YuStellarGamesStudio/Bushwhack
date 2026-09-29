@@ -1,6 +1,6 @@
 # 草叢突擊 Bushwhack
 
-[繁體中文](#繁體中文) · [English](#english) · [日本語](#日本語) · 線上遊玩／Play online／オンラインで遊ぶ：<https://bushwhack.yustellar.dev>
+[繁體中文](#繁體中文) · [English](#english) · [日本語](#日本語) · 線上遊玩／Play online／オンラインで遊ぶ：<https://bushwhack.ysgs.app>
 
 ## 繁體中文
 
@@ -8,7 +8,7 @@
 
 ### 特殊地圖
 
-在開始畫面的種子欄輸入代碼（不分大小寫）後按 Enter 或「開始行動」，或開啟 `https://bushwhack.yustellar.dev/?seed=<代碼>`。輸入代碼時，威脅條件列會改為顯示地圖名稱與難度，滑鼠停在種子欄可看完整規則。
+在開始畫面的種子欄輸入代碼（不分大小寫）後按 Enter 或「開始行動」，或開啟 `https://bushwhack.ysgs.app/?seed=<代碼>`。輸入代碼時，威脅條件列會改為顯示地圖名稱與難度，滑鼠停在種子欄可看完整規則。
 
 - 所有特殊地圖都從**第 6 波**開始。開局先連續選 3–4 次天賦，並額外獲得金幣、零件與十字弩，之後照常走章節作戰地圖直到第 25 波。
 - 難度、天氣與威脅條件由地圖固定，不套用自選的難度與威脅條件；換章時保留地圖天氣，只重建木牆。
@@ -36,7 +36,7 @@ To play locally, run `python3 -m http.server 8000` in this folder and open `http
 
 ### Special maps
 
-Type a code into the seed field on the start screen (case does not matter) and press Enter or Deploy, or open `https://bushwhack.yustellar.dev/?seed=<code>&lang=en`. While a code is typed, the threat line shows the map name and difficulty, and hovering over the seed field shows the full rules.
+Type a code into the seed field on the start screen (case does not matter) and press Enter or Deploy, or open `https://bushwhack.ysgs.app/?seed=<code>&lang=en`. While a code is typed, the threat line shows the map name and difficulty, and hovering over the seed field shows the full rules.
 
 - Every special map starts at **wave 6**. You first make 3–4 perk picks and get extra gold, scrap and the crossbow, then follow the chapter operation map as usual up to wave 25.
 - Each map fixes its own difficulty, weather and threat modifiers; your selected difficulty and threat modifiers are not used. The map keeps its weather through chapter changes; only the wooden walls are rebuilt.
@@ -64,7 +64,7 @@ Type a code into the seed field on the start screen (case does not matter) and p
 
 ### 特殊マップ
 
-スタート画面のシード欄にコードを入力し（大文字・小文字は区別しません）、Enter か「出撃」を押します。`https://bushwhack.yustellar.dev/?seed=<コード>&lang=ja` を開いても始められます。コードを入力すると脅威条件の行にマップ名と難易度が表示され、シード欄にマウスを乗せると詳しいルールが見られます。
+スタート画面のシード欄にコードを入力し（大文字・小文字は区別しません）、Enter か「出撃」を押します。`https://bushwhack.ysgs.app/?seed=<コード>&lang=ja` を開いても始められます。コードを入力すると脅威条件の行にマップ名と難易度が表示され、シード欄にマウスを乗せると詳しいルールが見られます。
 
 - 特殊マップはすべて**ウェーブ 6** から始まります。最初にパークを 3～4 回続けて選び、追加のゴールド・スクラップとクロスボウを受け取ります。その後は通常どおり章の作戦マップを進み、ウェーブ 25 まで戦います。
 - 難易度・天候・脅威条件はマップごとに固定され、自分で選んだ難易度と脅威条件は使われません。章が変わっても天候は変わらず、木の壁だけが作り直されます。
@@ -136,7 +136,7 @@ v1.4：第 2 波的情報任務可選「送達撤離點」或「殲滅全部敵�
 
 ## 多語系、Sitemap 與快取版本
 
-`index.html` 與 `sitemap.xml` 由 `tools/index.template.html` 與 `i18n.js` 產生，請勿手動編輯。頁面預填英文（預設語系），其他語系由 `game.js` 依 `?lang=` 在執行期替換；`sitemap.xml` 列出 `/`、`/?lang=zh-Hant`、`/?lang=ja` 並附 `hreflang` 對應，`robots.txt` 指向該 sitemap。頁面內的連結與資源引用（圖示、樣式、腳本、canonical、`hreflang`、`og:url`）都是相對路徑，可部署在任何網域或子路徑；只有分享圖（`og:image`／`twitter:image`）、`sitemap.xml` 與 `robots.txt` 依規範使用 `https://bushwhack.yustellar.dev/` 絕對網址（建置腳本的 `ORIGIN`）。頁面以內容雜湊引用 `style.css?v=…`、`i18n.js?v=…`、`game.js?v=…` 與瀏覽器圖示，瀏覽器與 CDN 在檔案變更後會取得新版。修改範本、`i18n.js`、`game.js`、`style.css` 或圖示後、提交前執行：
+`index.html` 與 `sitemap.xml` 由 `tools/index.template.html` 與 `i18n.js` 產生，請勿手動編輯。頁面預填英文（預設語系），其他語系由 `game.js` 依 `?lang=` 在執行期替換；`sitemap.xml` 列出 `/`、`/?lang=zh-Hant`、`/?lang=ja` 並附 `hreflang` 對應，`robots.txt` 指向該 sitemap。頁面內的連結與資源引用（圖示、樣式、腳本、canonical、`hreflang`、`og:url`）都是相對路徑，可部署在任何網域或子路徑；只有分享圖（`og:image`／`twitter:image`）、`sitemap.xml` 與 `robots.txt` 依規範使用 `https://bushwhack.ysgs.app/` 絕對網址（建置腳本的 `ORIGIN`）。頁面以內容雜湊引用 `style.css?v=…`、`i18n.js?v=…`、`game.js?v=…` 與瀏覽器圖示，瀏覽器與 CDN 在檔案變更後會取得新版。修改範本、`i18n.js`、`game.js`、`style.css` 或圖示後、提交前執行：
 
 ```sh
 node tools/build-pages.mjs
@@ -152,15 +152,15 @@ node tools/build-pages.mjs
 
 ## GitHub Pages + Cloudflare
 
-1. 推送本儲存庫至 [`YueyuHoshizora/bushwhack`](https://github.com/YueyuHoshizora/bushwhack)；在 **Settings → Pages → Build and deployment** 選擇 **Deploy from a branch**，分支 `main`、目錄 `/ (root)`。在 Pages 設定確認自訂網域為 `bushwhack.yustellar.dev`，並啟用 HTTPS；儲存庫根目錄已含對應 `CNAME`。
-2. 在 Cloudflare 的 `yustellar.dev` DNS 新增 `bushwhack` CNAME，目標為 `yueyuhoshizora.github.io`；先使用 **DNS only**（灰雲）完成 GitHub Pages 的網域驗證及憑證簽發，再改為 **Proxied**（橘雲）提供 CDN 快取。Cloudflare SSL/TLS 模式選 **Full (strict)**，避免 Flexible 引起重導迴圈。
-3. 開啟 `https://bushwhack.yustellar.dev/`，確認遊戲與分享圖片可載入。推送程式碼不會自動完成 GitHub Pages 啟用或 Cloudflare DNS 設定。
+1. 推送本儲存庫至 [`YuStellarGamesStudio/Bushwhack`](https://github.com/YuStellarGamesStudio/Bushwhack)；在 **Settings → Pages → Build and deployment** 選擇 **Deploy from a branch**，分支 `main`、目錄 `/ (root)`。在 Pages 設定確認自訂網域為 `bushwhack.ysgs.app`，並啟用 HTTPS；儲存庫根目錄已含對應 `CNAME`。
+2. 在 Cloudflare 的 `ysgs.app` DNS 新增 `bushwhack` CNAME，目標為 `yustellargamesstudio.github.io`；先使用 **DNS only**（灰雲）完成 GitHub Pages 的網域驗證及憑證簽發，再改為 **Proxied**（橘雲）提供 CDN 快取。Cloudflare SSL/TLS 模式選 **Full (strict)**，避免 Flexible 引起重導迴圈。
+3. 開啟 `https://bushwhack.ysgs.app/`，確認遊戲與分享圖片可載入。推送程式碼不會自動完成 GitHub Pages 啟用或 Cloudflare DNS 設定。
 
 遊戲檔案使用相對路徑；Cloudflare 僅代理／快取靜態檔案，不需要 Workers、API 或伺服器。根目錄的空檔 `.nojekyll` 讓 GitHub Pages 跳過 Jekyll、直接發布檔案（Markdown 文件含 `{{…}}` 範本語法，交給 Jekyll 會建置失敗），請勿刪除。`index.html` 本身若仍被快取成舊版，清除 Cloudflare 對 `/` 的快取。Cloudflare 快取規則需將查詢字串納入快取鍵（預設即是），或忽略 `lang` 參數皆可，因為三個語系回傳相同 HTML。
 
 ## 分享預覽
 
-頁面含 Open Graph／X（Twitter）大型圖片標籤，分享封面為 `assets/og-cover.png`（1200 × 630）；可編輯 `assets/og-cover.svg` 後重新輸出 PNG。`og:image`／`twitter:image` 依 Open Graph 規範使用絕對網址 `https://bushwhack.yustellar.dev/assets/og-cover.png`（部署到其他網域時修改 `tools/build-pages.mjs` 的 `ORIGIN` 後重新建置）；`og:url` 與 canonical 仍為相對路徑，部分社群平台的爬蟲可能因此無法取得正確網址。遊戲內「複製戰績」的連結以目前頁面網址產生。
+頁面含 Open Graph／X（Twitter）大型圖片標籤，分享封面為 `assets/og-cover.png`（1200 × 630）；可編輯 `assets/og-cover.svg` 後重新輸出 PNG。`og:image`／`twitter:image` 依 Open Graph 規範使用絕對網址 `https://bushwhack.ysgs.app/assets/og-cover.png`（部署到其他網域時修改 `tools/build-pages.mjs` 的 `ORIGIN` 後重新建置）；`og:url` 與 canonical 仍為相對路徑，部分社群平台的爬蟲可能因此無法取得正確網址。遊戲內「複製戰績」的連結以目前頁面網址產生。
 
 另備有英文 630 × 500 分享圖 `assets/share-en-630x500.png`，原稿為 `assets/share-en-630x500.svg`，可供需要此比例的分享版位直接使用；網站的 OG／X 圖片仍維持 1200 × 630，不會自動改用此圖。
 
